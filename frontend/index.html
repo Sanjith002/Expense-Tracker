@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="app">
+        <div class="dashboard">
+            <nav class="navbar">
+                <h1>ExpenseHub</h1>
+                <i class="bi bi-box-arrow-right logout-icon" onclick="logout()"></i>
+            </nav>
+            <div class="user">
+                <p class="welcome">Welcome Back👋</p>
+                <p class="user-name">Ram Kumar</p>
+            </div>
+            <div class="dashboard-header">
+                <h2>Expense Tracker</h2>
+                <p>Track Every Rupee</p>
+                <p>Take control of your income, expenses, and savings.</p>
+            </div>
+            <div class="summary-cards">
+                <div class="card card1">
+                    <p class="card-label">INCOME</p>
+                    <p id="income-value" class="card-value">₹ 0</p>
+                </div>
+                <div class="card card2">
+                    <p class="card-label">EXPENSE</p>
+                    <p id="expense-value" class="card-value">₹ 0</p>
+                </div>
+                <div class="card card3">
+                    <p class="card-label">SAVING</p>
+                    <p id="balance-value" class="card-value">₹ 0</p>
+                </div>
+            </div>
+            <div class="transaction-form">
+                <div class="transaction-form-box">
+                    <p class="section-title">Add New Transaction</p>
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <input id="description"  type="text" placeholder="Enter description...">
+                    </div>
+                    <div class="form-group">
+                        <label for="Amount">Amount</label>
+                        <input id="amount" type="text" placeholder="Enter amount...">
+                    </div>
+                    <div class="form-actions">
+                        <button class="form-actions-btn1" onclick="addIncome()">Add Income</button>
+                        <button class="form-actions-btn2" onclick="addExpense()">Add Expense</button>
+                    </div>
+                </div>    
+            </div>
+            <div class="history-section">
+                <div class="history-section-box">
+                    <p class="section-title">Recently Added Transactions</p>
+                    <div class="history-list">
+                        
+                    </div>
+                </div>    
+            </div>
+            <div class="all-transactions">
+                <div class="all-transactions-box">
+                    <div class="transactions-container">
+                        <p class="transaction-title">All Expenses</p>
+                        <div class="transactions" id="expense-transactions">
+                            
+                        </div>
+                    </div>    
+                    <div class="transactions-container">
+                        <p class="transaction-title">All Incomes</p>
+                        <div class="transactions" id="income-transactions">
+
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</html>
