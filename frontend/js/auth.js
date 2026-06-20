@@ -1,4 +1,4 @@
-const baseURl = "http://localhost:5000"
+const baseURl = "https://expense-tracker-xz85.onrender.com"
 const token = localStorage.getItem("token");
 
 const protectRoute = () => {
