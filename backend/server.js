@@ -12,7 +12,7 @@ const port = process.env.PORT || 6000;
 const app = express();
 
 app.use(cors({
-    origin:true
+    origin:"https://expense-tracker-9w7.pages.dev"
 }));
 app.use(express.json());
 app.use("/api/auth", authRoutes)
